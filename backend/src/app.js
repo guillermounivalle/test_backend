@@ -7,9 +7,6 @@ const cors = require('cors'); //Permite la conexión entre dos servidores (Front
 
 const app = express();
 
-// Db connection
-//const { mongoose } = require('./databases/driverMongoDB');
-//const { mysql } = require('./drivers_databases/driverMySql');
 
 // Settings 
 app.set('port', process.env.PORT || 4000);
@@ -22,7 +19,7 @@ app.use(express.json());
 
 
 // Routes
-//app.use('/api/student', require('./routes/student'));
+app.use('/api/countries', require('./routes/countries'));
 
 // Static Files
 app.use(express.static(path.join(__dirname, 'public')));;
